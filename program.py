@@ -16,6 +16,7 @@ re_drainage_radius = 660
 rd_damaged_zone_radius = 0.96
 rc_crushed_zone_radius = 0.042
 h_oil_column_thickness = 50
+# hp_perforated_interval = (15, 20, 25, 30, 35)
 hp_perforated_interval = 15
 Db = 35
 
@@ -23,11 +24,25 @@ Db = 35
 THE FOLLOWING QUANTITIES ARE IN (in)
 """
 #
-lp_perforation_length = (6, 18, 30, 42, 48)
+# lp_perforation_length = (6, 18, 30, 42, 48) # in
+# lp_perforation_length = (0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4.0)  # ft
+lp_perforation_length = (0.5, 1.5, 2.5, 3.5, 4.0)  # ft
 # (0.36, 0.336, 0.312, 0.288, 0.264, .... , 0.12)
 # rp_perforation_radius = (0.36, 0.12)
-rp_perforation_radius = (0.03, 0.01)
-hs_spacing_between_perforation = (1, 3)
+# rp_perforation_radius = (0.03, 0.01) # in
+rp_perforation_radius = (0.0096, 0.0146, 0.0196, 0.0246, 0.0296)  # ft
+# hs_spacing_between_perforation = (1, 3) #in
+hs_spacing_between_perforation = (
+    0.25,
+    0.2,
+    0.167,
+    0.142,
+    0.125,
+    0.111,
+    0.1,
+    0.091,
+    0.083,
+)  # ft
 
 """
 THE FOLLOWING QUANTITIES ARE IN MD (MILLI DARCY)
@@ -38,16 +53,19 @@ kd_damaged_zone_permeability = 50
 kv_vertical_permeability = 110
 kh_horizontal_permeability = 110
 ko_effective_oil_permeability = 95
+# ko_effective_oil_permeability = (93.5, 95)
 
 """
 THE FOLLOWING QUANTITIES ARE IN ACRE
 """
-A_area = 31.31
+A_area = 31.41  # acre
 
 """
 THE FOLLOWING QUANTITIES ARE IN PERCENTAGE
 """
-phi_porosity = 20
+# phi_porosity = 20
+# φ_porosity = 20
+φ_porosity = 0.2
 
 """
 THE FOLLOWING QUANTITY(S) ARE  IN 1/psi
@@ -72,7 +90,9 @@ Kro_Swc_Oil_rel_permeability_at_conn_water_sat = 0.8
 """
 THE FOLLOWING QUANTITY(S) ARE IN POUND PER CUBIC-FEET (lb/ft^3)
 """
+# ρo_oil_density = (47, 39)
 ρo_oil_density = 47
+# ρw_water_density = (62.4, 63.76)
 ρw_water_density = 62.4
 ρw_water_density_two = 63.76
 
@@ -80,6 +100,8 @@ THE FOLLOWING QUANTITY(S) ARE IN POUND PER CUBIC-FEET (lb/ft^3)
 THE FOLLOWING QUANTITY(S) ARE IN (bbl/STB)
 """
 # Bo_formation_volume_factor = (1, 1.1)
+
+# Bo_formation_volume_factor = (1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7)
 Bo_formation_volume_factor = 1
 
 """
