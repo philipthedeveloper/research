@@ -4,4 +4,4 @@
 /.vscode
 command_utils.py
 main.py
-/*cache
+/__pycache__
