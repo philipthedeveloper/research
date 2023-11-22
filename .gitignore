@@ -1,0 +1,6 @@
+*.xlsx
+*.pdf
+*.docx
+/.vscode
+command_utils.py
+main.py
